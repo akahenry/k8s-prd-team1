@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: base-repository
+  name: base
   namespace: flux-system
 spec:
   interval: 1m0s
@@ -24,7 +24,7 @@ spec:
   url: ssh://git@github.com/akahenry/k8s-prd-team1
   include:
     - repository:
-        name: base-repository
+        name: base
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
