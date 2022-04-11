@@ -22,10 +22,7 @@ spec:
   secretRef:
     name: flux-system
   url: ssh://git@github.com/akahenry/k8s-prd-team1
-  include:
-    - repository:
-        name: base-repository
-      toPath: base
+  recurseSubmodules: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
