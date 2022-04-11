@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo-copy
+spec:
+  template:
+    spec:
+      containers:
+      - name: podinfod-copy
+        image: ghcr.io/stefanprodan/podinfo:6.1.1
